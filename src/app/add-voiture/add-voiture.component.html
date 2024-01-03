@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+    <h2>Ajouter une voiture :</h2>
+    </div>
+    
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom de la voiture</label>
+            <input type="text" [(ngModel)]="newVoiture.nomVoiture" name="nomVoiture" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix de la voiture</label>
+            <input type="number" [(ngModel)]="newVoiture.prixVoiture" name="prixVoiture" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Série</label>
+            <input type="text" [(ngModel)]="newVoiture.serie" name="serie" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Date de mise en circulation</label>
+            <input type="date" [(ngModel)]="newVoiture.dateMiseEnCirculation" name="dateMiseEnCirculation" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Marque</label>
+            <select class="form-control form-control-lg" id="idMar" name="idMar"
+            [(ngModel)]="newIdMar"
+            >
+             <option *ngFor="let marq of marques" [value]="marq.idMar" >
+             {{marq.marque}}
+            </option>
+            </select>
+            </div>
+        <div class="mt-2">
+            <button type="submit" (click)="addVoiture()" class="btn btn-success">Ajouter</button>
+        </div>
+        
+  
+    </div>

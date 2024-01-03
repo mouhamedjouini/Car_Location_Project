@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+        <h2>Liste des Marques :</h2>
+    <table >
+    <thead>
+    <tr>
+        <th>Marque</th>
+        <th>Description Marque</th>
+       
+        <th>ACTIONS</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let marque of marques">
+    <tr >
+    
+        <td>{{ marque.marque }}</td>
+        <td>{{ marque.descriptionMarque }}</td>
+        <td><a class="btn btn-danger" (click)="supprimerMarque(marque.idMar)">Supprimer</a></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>

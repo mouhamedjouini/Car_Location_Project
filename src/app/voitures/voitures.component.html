@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table >
+    <thead>
+    <tr>
+        <th>Nom de la voiture</th>
+        <th>Prix de la voiture</th>
+        <th>Série</th>
+        <th>Date de mise en circulation</th>
+        <th>ACTIONS</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let voiture of voitures">
+    <tr >
+    
+        <td>{{ voiture.nomVoiture }}</td>
+        <td>{{ voiture.prixVoiture }}</td>
+        <td>{{ voiture.serie }}</td>
+        <td>{{ voiture.dateMiseEnCirculation }}</td>
+        <td>{{ voiture.marque.marque}}</td>
+        <td><a class="btn btn-danger" (click)="supprimerVoiture(voiture.idVoiture)">Supprimer</a></td>
+        <td><a class="btn btn-success" [routerLink]="['/updateVoiture',voiture.idVoiture]">Modifier</a></td>
+
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
